@@ -41,7 +41,7 @@ public class KeyTool {
     }
 
     public PublicKey convertPemToPublicKey(String publicKeyPem) throws IOException, InvalidKeySpecException {
-        BASE64Decoder b64=new BASE64Decoder();
+        BASE64Decoder b64 = new BASE64Decoder();
         byte[] decoded = b64.decodeBuffer(publicKeyPem);
         X509EncodedKeySpec spec = new X509EncodedKeySpec(decoded);
 
@@ -49,7 +49,7 @@ public class KeyTool {
     }
 
     public PrivateKey convertPemToPrivateKey(String privateKeyPem) throws InvalidKeySpecException, IOException {
-        BASE64Decoder b64=new BASE64Decoder();
+        BASE64Decoder b64 = new BASE64Decoder();
         byte[] decoded = b64.decodeBuffer(privateKeyPem);
         PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(decoded);
 
